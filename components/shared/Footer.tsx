@@ -17,24 +17,28 @@ export function Footer() {
         </div>
 
         <div className="flex items-center gap-3">
-          <a
-            href={profile.socials.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="GitHub"
-            className="flex h-9 w-9 items-center justify-center rounded-full border border-border transition-colors hover:border-accent/50 hover:text-accent"
-          >
-            <GithubIcon className="h-4 w-4" />
-          </a>
-          <a
-            href={profile.socials.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn"
-            className="flex h-9 w-9 items-center justify-center rounded-full border border-border transition-colors hover:border-accent/50 hover:text-accent"
-          >
-            <LinkedinIcon className="h-4 w-4" />
-          </a>
+          {profile.socials.github && (
+            <a
+              href={profile.socials.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+              className="flex h-9 w-9 items-center justify-center rounded-full border border-border transition-colors hover:border-accent/50 hover:text-accent"
+            >
+              <GithubIcon className="h-4 w-4" />
+            </a>
+          )}
+          {profile.socials.linkedin && (
+            <a
+              href={profile.socials.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              className="flex h-9 w-9 items-center justify-center rounded-full border border-border transition-colors hover:border-accent/50 hover:text-accent"
+            >
+              <LinkedinIcon className="h-4 w-4" />
+            </a>
+          )}
           <a
             href={`mailto:${profile.email}`}
             aria-label="Email"

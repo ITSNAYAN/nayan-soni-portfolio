@@ -10,11 +10,17 @@ const montserrat = Montserrat({
   display: "swap",
 });
 
+// Resolves to (in order): explicit env var → Vercel preview URL → localhost.
+// Set NEXT_PUBLIC_SITE_URL to your production domain on your host.
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000");
+
 export const metadata: Metadata = {
   title: "Nayan Soni — Flutter Developer",
   description:
     "Flutter Mobile Application Developer with 2+ years of experience building and shipping enterprise-grade Android & iOS apps.",
-  metadataBase: new URL("https://nayansoni.dev"),
+  metadataBase: new URL(siteUrl),
   openGraph: {
     title: "Nayan Soni — Flutter Developer",
     description:

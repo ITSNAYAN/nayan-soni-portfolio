@@ -6,9 +6,10 @@ export const profile = {
   email: "soninayan82@gmail.com",
   phone: "+91-8827966816",
   resumeUrl: "/Nayan_resume.pdf",
+  // Paste your real URLs here. Empty strings keep the buttons hidden.
   socials: {
-    github: "https://github.com/",
-    linkedin: "https://linkedin.com/in/",
+    github: "",
+    linkedin: "",
   },
   headline: "I Build Apps That Ship, Not Just Demos",
   subHeadline:
@@ -104,7 +105,6 @@ export const experience: Experience[] = [
     projects: [
       {
         name: "Helium AI — Chat Application",
-        stores: { play: "#", app: "#" },
         bullets: [
           "Owned end-to-end delivery of the Helium AI chat app — from UI/UX implementation to production release on Play Store and App Store.",
           "Engineered real-time conversational AI using WebSockets with auto-reconnect and message queuing; integrated Google Sign-In, Sign in with Apple, and JWT-based session management with token refresh.",
@@ -130,7 +130,6 @@ export const experience: Experience[] = [
     projects: [
       {
         name: "JIIT Scholar Online",
-        stores: { play: "#", app: "#" },
         bullets: [
           "Led end-to-end module delivery — UI/UX, Flutter development, API integration, payments, and Play Store / App Store deployment.",
           "Built OTP-based authentication and core student modules (attendance, faculty registration, feedback, student reports, hostel & medical records); improved data retrieval efficiency by ~30%.",
@@ -139,7 +138,6 @@ export const experience: Experience[] = [
       },
       {
         name: "JILIT-ESS (Employee Self-Service)",
-        stores: { play: "#", app: "#" },
         bullets: [
           "Integrated EaseBuzz payment gateway in collaboration with backend teams — reducing payment failures by ~25%.",
           "Transformed Figma designs into pixel-perfect responsive Flutter UIs with GetX — improved responsiveness by ~40% and helped deliver the project ~20% faster.",
@@ -147,7 +145,6 @@ export const experience: Experience[] = [
       },
       {
         name: "Olympus-Wellness",
-        stores: { play: "#", app: "#" },
         bullets: [
           "Built a psychotherapy Flutter app enabling appointment booking, doctor profiles, and secure EaseBuzz payments using GetX state management.",
           "Handled API integration with proper error handling and local caching; collaborated with backend to ensure reliable data flow across the app.",
@@ -196,7 +193,7 @@ export const projects: Project[] = [
     tech: ["Flutter", "WebSockets", "JWT", "Firebase", "Clean Architecture"],
     category: "AI",
     company: "Neural Arc",
-    links: { play: "#", app: "#" },
+    links: {},
     accent: "from-[#F4C2A1]/40 to-[#ff5f8a]/30",
     imageUrl: "/helium-ai.png",
   },
@@ -245,7 +242,7 @@ export const projects: Project[] = [
     tech: ["Flutter", "GetX", "EaseBuzz", "REST APIs"],
     category: "Enterprise",
     company: "JILIT",
-    links: { play: "#", app: "#" },
+    links: {},
     accent: "from-[#7cc9ff]/30 to-[#F4C2A1]/20",
     imageUrl: "/jiit-scholar-mockup.png",
     fullMockup: true,
@@ -270,7 +267,7 @@ export const projects: Project[] = [
     tech: ["Flutter", "GetX", "EaseBuzz", "Figma"],
     category: "Enterprise",
     company: "JILIT",
-    links: { play: "#", app: "#" },
+    links: {},
     accent: "from-[#b5f0c0]/25 to-[#F4C2A1]/25",
     imageUrl: "/jilit-ess.png",
   },
@@ -294,7 +291,7 @@ export const projects: Project[] = [
     tech: ["Flutter", "GetX", "REST APIs", "EaseBuzz"],
     category: "Health",
     company: "JILIT",
-    links: { play: "#", app: "#" },
+    links: {},
     accent: "from-[#e6a1ff]/25 to-[#F4C2A1]/25",
     imageUrl: "/olympus-wellness.png",
   },

@@ -69,24 +69,28 @@ export function Contact() {
 
         <Reveal delay={0.4}>
           <div className="flex flex-wrap items-center justify-center gap-3">
-            <a
-              href={profile.socials.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-border bg-surface/60 px-4 py-2 text-sm text-foreground/85 transition-colors hover:border-accent/40 hover:text-accent"
-            >
-              <GithubIcon className="h-4 w-4" />
-              GitHub
-            </a>
-            <a
-              href={profile.socials.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-border bg-surface/60 px-4 py-2 text-sm text-foreground/85 transition-colors hover:border-accent/40 hover:text-accent"
-            >
-              <LinkedinIcon className="h-4 w-4" />
-              LinkedIn
-            </a>
+            {profile.socials.github && (
+              <a
+                href={profile.socials.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full border border-border bg-surface/60 px-4 py-2 text-sm text-foreground/85 transition-colors hover:border-accent/40 hover:text-accent"
+              >
+                <GithubIcon className="h-4 w-4" />
+                GitHub
+              </a>
+            )}
+            {profile.socials.linkedin && (
+              <a
+                href={profile.socials.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full border border-border bg-surface/60 px-4 py-2 text-sm text-foreground/85 transition-colors hover:border-accent/40 hover:text-accent"
+              >
+                <LinkedinIcon className="h-4 w-4" />
+                LinkedIn
+              </a>
+            )}
             <a
               href={`tel:${profile.phone}`}
               className="inline-flex items-center gap-2 rounded-full border border-border bg-surface/60 px-4 py-2 text-sm text-foreground/85 transition-colors hover:border-accent/40 hover:text-accent"
