@@ -6,10 +6,9 @@ export const profile = {
   email: "soninayan82@gmail.com",
   phone: "+91-8827966816",
   resumeUrl: "/Nayan_resume.pdf",
-  // Paste your real URLs here. Empty strings keep the buttons hidden.
   socials: {
-    github: "",
-    linkedin: "",
+    github: "https://github.com/ITSNAYAN",
+    linkedin: "https://www.linkedin.com/in/nayan-soni-68047a1b8/",
   },
   headline: "I Build Apps That Ship, Not Just Demos",
   subHeadline:
