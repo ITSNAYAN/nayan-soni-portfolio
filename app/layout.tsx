@@ -10,11 +10,18 @@ const montserrat = Montserrat({
   display: "swap",
 });
 
-// Resolves to (in order): explicit env var → Vercel preview URL → localhost.
+// Resolves to (in order): explicit env var → Vercel-injected URL → localhost.
 // Set NEXT_PUBLIC_SITE_URL to your production domain on your host.
-const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ??
-  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000");
+// Empty strings are treated the same as unset (Vercel inlines missing
+// NEXT_PUBLIC_* vars as "", so a plain `??` fallback would slip past them).
+function resolveSiteUrl(): string {
+  const explicit = process.env.NEXT_PUBLIC_SITE_URL?.trim();
+  if (explicit) return explicit;
+  const vercel = process.env.VERCEL_URL?.trim();
+  if (vercel) return `https://${vercel}`;
+  return "http://localhost:3000";
+}
+const siteUrl = resolveSiteUrl();
 
 export const metadata: Metadata = {
   title: "Nayan Soni — Flutter Developer",
