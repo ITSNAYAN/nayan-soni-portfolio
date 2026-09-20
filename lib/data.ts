@@ -5,7 +5,7 @@ export const profile = {
   location: "India",
   email: "soninayan82@gmail.com",
   phone: "+91-8827966816",
-  resumeUrl: "https://drive.google.com/file/d/1OxELtMKn7lcvrUmNPLXL_8W_gTssMW4w/view?usp=sharing",
+  resumeUrl: "https://drive.google.com/file/d/1W7TeUAiy9QBEuetD8O-wCWdFYcLIzQuj/view?usp=sharing",
   socials: {
     github: "https://github.com/ITSNAYAN",
     linkedin: "https://www.linkedin.com/in/nayan-soni-68047a1b8/",
