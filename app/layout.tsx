@@ -11,11 +11,10 @@ const montserrat = Montserrat({
 });
 
 // Resolves to (in order): explicit env var → Vercel-injected URL → localhost.
-// Set NEXT_PUBLIC_SITE_URL to your production domain on your host.
-// Empty strings are treated the same as unset (Vercel inlines missing
-// NEXT_PUBLIC_* vars as "", so a plain `??` fallback would slip past them).
+// Set SITE_URL to your production domain on your host. Only read on the
+// server (for metadataBase), so no NEXT_PUBLIC_ prefix is needed.
 function resolveSiteUrl(): string {
-  const explicit = process.env.NEXT_PUBLIC_SITE_URL?.trim();
+  const explicit = process.env.SITE_URL?.trim();
   if (explicit) return explicit;
   const vercel = process.env.VERCEL_URL?.trim();
   if (vercel) return `https://${vercel}`;
